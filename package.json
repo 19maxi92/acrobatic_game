@@ -1,7 +1,7 @@
 {
   "name": "acrobatas-laplata",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "App.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
