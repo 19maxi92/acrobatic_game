@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
-import Menu from './components/Menu';
-import Game from './components/Game';
+import Menu from './components/menu';
+import Game from './components/game';
 import GameOver from './components/GameOver';
 
 export default function App() {
-  const [gameState, setGameState] = useState('menu'); // menu, playing, gameOver
+  const [gameState, setGameState] = useState('menu');
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
 
@@ -36,8 +36,8 @@ export default function App() {
         <Game onGameOver={endGame} />
       )}
       {gameState === 'gameOver' && (
-        <GameOver 
-          score={score} 
+        <GameOver
+          score={score}
           highScore={highScore}
           onRestart={startGame}
           onMenu={returnToMenu}

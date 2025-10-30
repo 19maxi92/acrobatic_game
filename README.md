@@ -23,32 +23,29 @@ Un juego móvil acrobático tipo "Stack Tower" donde construís una torre de acr
 
 ## 🚀 Instalación y Desarrollo
 
-### Requisitos Previos
+### ⚡ Inicio Rápido (Recomendado)
 
-- Node.js (v16 o superior)
-- npm o yarn
-- Expo CLI
-- Para Android: Android Studio o dispositivo físico
+1. **Instala las dependencias**:
+   ```bash
+   npm install
+   ```
 
-### Instalar Dependencias
+2. **Instala Expo Go en tu celular**:
+   - [Android - Google Play](https://play.google.com/store/apps/details?id=host.exp.exponent)
+   - [iOS - App Store](https://apps.apple.com/app/expo-go/id982107779)
 
-```bash
-npm install
-```
+3. **Inicia el juego**:
+   ```bash
+   npm start
+   ```
 
-### Iniciar en Modo Desarrollo
+4. **Escanea el código QR** con Expo Go (Android) o la Cámara (iOS)
 
-```bash
-npm start
-```
+¡Y listo! El juego se ejecutará en tu celular.
 
-Luego escanea el código QR con Expo Go (Android) o Camera (iOS).
+### 📖 Guía Completa
 
-### Ejecutar en Android
-
-```bash
-npm run android
-```
+Para instrucciones detalladas de todas las formas de ejecutar el juego, consultá [COMO_EJECUTAR.md](./COMO_EJECUTAR.md)
 
 ## 📱 Generar APK para Android
 
