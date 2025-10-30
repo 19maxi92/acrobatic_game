@@ -48,9 +48,16 @@ export default function GameOver({ score, highScore, onRestart, onMenu }) {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.tip}>
+        <View style={styles.tipsBox}>
+          <Text style={styles.tipTitle}>💡 Consejos Pro:</Text>
           <Text style={styles.tipText}>
-            💡 Consejo: Las figuras con más acróbatas dan más puntos, pero son más difíciles de apilar
+            • Precisión perfecta = combos x2
+          </Text>
+          <Text style={styles.tipText}>
+            • Mantené racha de perfecto para bonificación 🔥
+          </Text>
+          <Text style={styles.tipText}>
+            • Figuras grandes dan más puntos pero son más difíciles
           </Text>
         </View>
       </View>
@@ -164,18 +171,27 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  tip: {
+  tipsBox: {
     position: 'absolute',
     bottom: 30,
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
     borderRadius: 15,
     padding: 15,
     marginHorizontal: 20,
+    borderWidth: 2,
+    borderColor: 'rgba(52, 152, 219, 0.3)',
+  },
+  tipTitle: {
+    fontSize: 14,
+    color: '#2C3E50',
+    fontWeight: 'bold',
+    marginBottom: 8,
   },
   tipText: {
-    fontSize: 12,
+    fontSize: 11,
     color: '#34495E',
-    textAlign: 'center',
-    fontStyle: 'italic',
+    textAlign: 'left',
+    marginVertical: 2,
+    lineHeight: 16,
   },
 });
