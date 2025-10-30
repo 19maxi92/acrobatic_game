@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Torre de Acróbatas LP",
+    "slug": "acrobatas-laplata",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#87CEEB"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laplata.acrobatas"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#87CEEB"
+      },
+      "package": "com.laplata.acrobatas",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    }
+  }
+}
