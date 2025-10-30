@@ -1,50 +1,147 @@
-# Welcome to your Expo app 👋
+# 🤸 Torre de Acróbatas LP
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Un juego móvil acrobático tipo "Stack Tower" donde construís una torre de acróbatas en diferentes formaciones. Inspirado en los grupos de acrobacia de La Plata, Argentina.
 
-## Get started
+## 🎮 Características del Juego
 
-1. Install dependencies
+- **Múltiples Formaciones**: 14 formaciones diferentes de acróbatas (solos, dúos, tríos y cuartetos)
+- **Sistema de Combos**: Conseguí combos por colocaciones precisas para multiplicar tus puntos
+- **Racha Perfecta**: Mantené una racha de colocaciones perfectas para bonificaciones 🔥
+- **Física de Tambaleo**: La torre se tambalea cuando la precisión no es perfecta
+- **Feedback Háptico**: Vibración para diferentes tipos de colocaciones
+- **Dificultad Progresiva**: El juego se vuelve más difícil a medida que avanzás
+- **Animaciones Fluidas**: Efectos visuales y animaciones usando React Native Reanimated
 
-   ```bash
-   npm install
-   ```
+## 🎯 Cómo Jugar
 
-2. Start the app
+1. Los acróbatas caen desde la parte superior
+2. Tocá la pantalla para soltar al acróbata
+3. Tratá de apilarlos con la mayor precisión posible
+4. Más precisión = más puntos
+5. Colocaciones perfectas (>95% precisión) generan combos
+6. Mantené la racha para multiplicadores
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Instalación y Desarrollo
 
-In the output, you'll find options to open the app in a
+### Requisitos Previos
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js (v16 o superior)
+- npm o yarn
+- Expo CLI
+- Para Android: Android Studio o dispositivo físico
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Instalar Dependencias
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Iniciar en Modo Desarrollo
 
-## Learn more
+```bash
+npm start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Luego escanea el código QR con Expo Go (Android) o Camera (iOS).
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Ejecutar en Android
 
-## Join the community
+```bash
+npm run android
+```
 
-Join our community of developers creating universal apps.
+## 📱 Generar APK para Android
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Opción 1: Build Rápido (Recomendado)
+
+```bash
+npm run build:android
+```
+
+Este comando genera un APK de preview usando EAS Build.
+
+### Opción 2: Build de Producción
+
+```bash
+npm run build:android:production
+```
+
+### Instalación de EAS CLI (si no lo tenés)
+
+```bash
+npm install -g eas-cli
+```
+
+Luego iniciá sesión:
+
+```bash
+eas login
+```
+
+### Configuración Inicial de EAS
+
+```bash
+eas build:configure
+```
+
+## 🎨 Estructura del Proyecto
+
+```
+acrobatic_game/
+├── app.js                 # Componente principal
+├── components/
+│   ├── Game.js           # Lógica principal del juego
+│   ├── Menu.js           # Pantalla de menú
+│   └── GameOver.js       # Pantalla de game over
+├── assets/               # Imágenes e íconos
+├── app.json             # Configuración de Expo
+├── eas.json             # Configuración de EAS Build
+└── package.json         # Dependencias
+```
+
+## 🎪 Sistema de Puntuación
+
+La puntuación se calcula con:
+
+```
+Puntos = 50 × Precisión × Cantidad_Acróbatas × Multiplicador_Combo × Dificultad
+```
+
+- **Precisión**: 0-1 (100% = colocación perfecta)
+- **Cantidad de Acróbatas**: 1-4 según la formación
+- **Multiplicador de Combo**: 1 + (combo × 0.2)
+- **Dificultad**: 1-4 según la complejidad de la formación
+
+## 🔥 Tipos de Colocaciones
+
+- **Perfecta (>95%)**: +1 combo, racha perfecta, vibración media
+- **Buena (>75%)**: +1 combo, vibración suave
+- **Regular (<75%)**: Se reinicia el combo, vibración fuerte
+
+## 🛠️ Tecnologías Utilizadas
+
+- React Native
+- Expo
+- React Native Reanimated (animaciones)
+- Expo Haptics (vibración)
+- Expo Image (optimización de imágenes)
+
+## 📜 Licencia
+
+Este proyecto está inspirado en los grupos de acrobacia de La Plata:
+- Mamarula
+- AÉREA
+- La Instalacción
+- Redes Club de Circo
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, abrí un issue o pull request.
+
+## 📧 Contacto
+
+Para consultas o sugerencias sobre el juego, por favor contactá al equipo de desarrollo.
+
+---
+
+**¡Disfrutá construyendo la torre más alta de acróbatas! 🤸🎪**

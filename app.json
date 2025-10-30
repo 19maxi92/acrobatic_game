@@ -16,7 +16,10 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.laplata.acrobatas"
+      "bundleIdentifier": "com.laplata.acrobatas",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,10 +27,33 @@
         "backgroundColor": "#87CEEB"
       },
       "package": "com.laplata.acrobatas",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions": [
+        "VIBRATE"
+      ],
+      "config": {
+        "googleMobileAdsAppId": ""
+      }
     },
     "web": {
       "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "buildToolsVersion": "34.0.0"
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "acrobatic-game-laplata"
+      }
     }
   }
 }

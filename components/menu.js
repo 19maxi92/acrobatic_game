@@ -19,14 +19,18 @@ export default function Menu({ onStart, highScore }) {
         <Text style={styles.subtitle}>La Plata, Buenos Aires</Text>
         
         <View style={styles.infoBox}>
+          <Text style={styles.infoTitle}>📋 Cómo Jugar</Text>
           <Text style={styles.infoText}>
-            Apilá acróbatas haciendo diferentes figuras.
+            🎯 Apilá acróbatas para construir la torre más alta
           </Text>
           <Text style={styles.infoText}>
-            Pueden caer solos o en grupos de 2-3.
+            ⚡ Combos perfectos = más puntos
           </Text>
           <Text style={styles.infoText}>
-            ¡Cuanto más preciso, más puntos!
+            🔥 Mantené racha para bonificaciones
+          </Text>
+          <Text style={styles.infoText}>
+            🎪 Más acróbatas = más dificultad y puntos
           </Text>
         </View>
 
@@ -84,18 +88,31 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   infoBox: {
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
-    borderRadius: 15,
+    backgroundColor: 'rgba(255, 255, 255, 0.95)',
+    borderRadius: 20,
     padding: 20,
     marginBottom: 30,
-    borderWidth: 3,
+    borderWidth: 4,
     borderColor: '#3498DB',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 5,
   },
-  infoText: {
-    fontSize: 16,
+  infoTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
     color: '#2C3E50',
     textAlign: 'center',
-    marginVertical: 5,
+    marginBottom: 12,
+  },
+  infoText: {
+    fontSize: 14,
+    color: '#34495E',
+    textAlign: 'left',
+    marginVertical: 4,
+    lineHeight: 20,
   },
   scoreBox: {
     backgroundColor: 'rgba(241, 196, 15, 0.9)',
