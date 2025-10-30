@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, StatusBar } from 'react-native';
-import Menu from './components/Menu';
-import Game from './components/Game';
+import Menu from './components/menu';
+import Game from './components/game';
 import GameOver from './components/GameOver';
 
 export default function App() {
