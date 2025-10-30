@@ -7,9 +7,11 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "dev": "expo start --clear",
     "lint": "expo lint",
     "build:android": "eas build --platform android --profile preview",
-    "build:android:production": "eas build --platform android --profile production"
+    "build:android:production": "eas build --platform android --profile production",
+    "help": "echo '📱 COMANDOS DISPONIBLES:\n\n  npm start          - Iniciar en modo desarrollo (escanear QR)\n  npm run web        - Abrir en navegador\n  npm run android    - Ejecutar en emulador Android\n  npm run dev        - Iniciar limpiando cache\n\nPara más info, ver COMO_EJECUTAR.md'"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.0.3",
